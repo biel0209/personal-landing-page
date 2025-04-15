@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevCard Clone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+      background-color: #f8f9fa;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar {
+      background-color: #4caf87;
+      color: white;
+      height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar .nav-link {
+      color: white;
+    }
+
+    .btn-hire {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .btn-hire:hover {
+      background-color: #25632a;
+    }
+
+    .main-content {
+      padding: 2rem;
+    }
+
+    .section-title {
+      border-left: 5px solid #4caf87;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .skill-icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+      color: #4caf87;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-2 sidebar text-center d-flex flex-column align-items-center">
+        <img src="https://via.placeholder.com/120" alt="Profile" />
+        <h4 class="mt-3">Marcus Melo</h4>
+        <p>Senior Software Engineer</p>
+        <p>Hi, my name is Marcus Melo and I'm a senior software engineer. Welcome to my personal website!</p>
+        <div class="d-flex justify-content-center gap-2 mb-4">
+          <i class="fab fa-x-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-github"></i>
+          <i class="fab fa-stack-overflow"></i>
+        </div>
+
+        <ul class="nav flex-column text-start w-100">
+          <li class="nav-item"><a class="nav-link" href="#">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services & Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        <button class="btn btn-hire">Hire Me</button>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-10 main-content">
+        <h1>Marcus Melo</h1>
+        <h5 class="text-muted">Desenvolvedor de Software</h5>
+        <p>Sou desenvolvedor de software com foco em desenvolvimento full stack, especializado na criação de aplicações
+          web escaláveis, automações inteligentes (RPA) e soluções com IA generativa. Tenho experiência com tecnologias
+          modernas como Next.js, React, TypeScript, Node.js, além de integrações cloud com AWS e Microsoft Power
+          Platform. Tenho vivência em projetos que vão desde a integração de sistemas corporativos até o desenvolvimento
+          de chatbots e sistemas de gestão personalizados. Acredito em tecnologia como ferramenta para simplificar
+          processos e gerar valor real para as organizações. Quer saber como posso ajudar no seu projeto? Confira meu
+          portfólio e currículo online.</p>
+        <div class="d-flex gap-2 mb-4">
+          <a class="btn btn-success" href="#">Ver Portfolio</a>
+          <a class="btn btn-dark" href="#">Ver resumo</a>
+        </div>
+
+        <div>
+          <h3 class="section-title">What I do</h3>
+          <p>I have more than 10 years' experience building software for clients all over the world. Below is a quick
+            overview of my main technical skill sets and technologies I use.</p>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+            <div class="col">
+              <div><i class="fab fa-js skill-icon"></i><strong>Vanilla JavaScript</strong>
+                <p>Experienced in raw JavaScript for clean and efficient code.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div><i class="fab fa-angular skill-icon"></i><strong>Angular, React & Vue</strong>
+                <p>Proficient with major frontend frameworks for dynamic UIs.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div><i class="fab fa-node-js skill-icon"></i><strong>Node.js</strong>
+                <p>Server-side development for scalable backend apps.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div><i class="fab fa-python skill-icon"></i><strong>Python & Django</strong>
+                <p>Powerful web applications with Python ecosystems.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div><i class="fab fa-php skill-icon"></i><strong>PHP</strong>
+                <p>Experience in legacy systems and modern PHP frameworks.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div><i class="fab fa-npm skill-icon"></i><strong>npm, Gulp & Grunt</strong>
+                <p>Automation and package management tools for dev workflow.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div><i class="fab fa-html5 skill-icon"></i><strong>HTML & CSS</strong>
+                <p>Semantic, accessible and responsive web design.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div><i class="fab fa-sass skill-icon"></i><strong>Sass & LESS</strong>
+                <p>Advanced CSS preprocessor capabilities for styling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
