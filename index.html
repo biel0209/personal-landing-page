@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DevCard Clone</title>
+  <title>Marcus Melo | Dev</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <style>
     body {
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
@@ -15,36 +16,66 @@
     }
 
     .sidebar {
-      background-color: #4caf87;
+      background-color: #7462fd;
       color: white;
       height: 100vh;
       padding: 2rem 1rem;
     }
 
-    .sidebar img {
-      width: 120px;
-      height: 120px;
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      gap: 20px;
+      padding-left: 26px;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+      background-color: transparent;
+      font-weight: 400;
+      font-size: large;
+      border-radius: 50px;
+      padding: 5px;
+      cursor: pointer;
+      width: 56px;
+      transition: width 0.3s ease;
+      overflow: hidden;
+    }
+
+    .menu-item:hover {
+      width: 140px;
+    }
+
+    .menu-icon {
+      font-size: 1.6rem;
+      background-color: rgba(128, 128, 128, 0.15);
+      padding: 10px;
       border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    .sidebar .nav-link {
+    .menu-item:hover{
+      background-color: #7462fd;
       color: white;
     }
 
-    .btn-hire {
-      background-color: #2e7d32;
-      color: white;
-      border: none;
-      width: 100%;
-      padding: 0.75rem;
-      margin-top: 1rem;
-      font-weight: bold;
+    .menu-text {
+      opacity: 0;
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
     }
 
-    .btn-hire:hover {
-      background-color: #25632a;
+    .menu-item:hover .menu-text {
+      opacity: 1;
     }
 
     .main-content {
@@ -52,7 +83,7 @@
     }
 
     .section-title {
-      border-left: 5px solid #4caf87;
+      border-left: 5px solid #7462fd;
       padding-left: 1rem;
       margin-bottom: 1rem;
       font-weight: bold;
@@ -61,7 +92,7 @@
     .skill-icon {
       font-size: 1.5rem;
       margin-right: 0.5rem;
-      color: #4caf87;
+      color: #7462fd;
     }
   </style>
 </head>
@@ -69,29 +100,38 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <!-- Sidebar -->
-      <div class="col-md-2 sidebar text-center d-flex flex-column align-items-center">
-        <img src="https://via.placeholder.com/120" alt="Profile" />
-        <h4 class="mt-3">Marcus Melo</h4>
-        <p>Senior Software Engineer</p>
-        <p>Hi, my name is Marcus Melo and I'm a senior software engineer. Welcome to my personal website!</p>
-        <div class="d-flex justify-content-center gap-2 mb-4">
-          <i class="fab fa-x-twitter"></i>
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-github"></i>
-          <i class="fab fa-stack-overflow"></i>
-        </div>
+      <!-- Container da coluna lateral -->
+      <div class="col-md-2 menu">
+        <!-- Home -->
+        <a class="menu-item" href="#">
+          <span class="material-symbols-outlined menu-icon">home</span>
+          <span class="menu-text">Home</span>
+        </a>
 
-        <ul class="nav flex-column text-start w-100">
-          <li class="nav-item"><a class="nav-link" href="#">About Me</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Services & Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-        <button class="btn btn-hire">Hire Me</button>
+        <!-- Sobre -->
+        <a class="menu-item" href="#">
+          <span class="material-symbols-outlined menu-icon">person</span>
+          <span class="menu-text">Sobre</span>
+        </a>
+
+        <!-- Projetos -->
+        <a class="menu-item" href="#">
+          <span class="material-symbols-outlined menu-icon">description</span>
+          <span class="menu-text">Projetos</span>
+        </a>
+
+        <!-- Contato -->
+        <a class="menu-item" href="#">
+          <span class="material-symbols-outlined menu-icon">mail</span>
+          <span class="menu-text">Contato</span>
+        </a>
       </div>
+
+
+
+
+
+
 
       <!-- Main Content -->
       <div class="col-md-10 main-content">
@@ -115,42 +155,27 @@
           <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
             <div class="col">
               <div><i class="fab fa-js skill-icon"></i><strong>JavaScript e TypeScript</strong>
-                <p>Experienced in raw JavaScript for clean and efficient code.</p>
+                <p>Desenvolvimento ágil com JS e robustez com TS.</p>
               </div>
             </div>
             <div class="col">
-              <div><i class="fab fa-angular skill-icon"></i><strong>Angular, React & Vue</strong>
-                <p>Proficient with major frontend frameworks for dynamic UIs.</p>
+              <div><i class="fab fa-react skill-icon"></i><strong>React & Vue</strong>
+                <p>Interfaces dinâmicas e modernas com os principais frameworks de front-end.</p>
               </div>
             </div>
             <div class="col">
               <div><i class="fab fa-node-js skill-icon"></i><strong>Node.js</strong>
-                <p>Server-side development for scalable backend apps.</p>
+                <p>Desenvolvimento do lado do servidor para aplicações de backend escaláveis.</p>
               </div>
             </div>
             <div class="col">
-              <div><i class="fab fa-python skill-icon"></i><strong>Python & Django</strong>
-                <p>Powerful web applications with Python ecosystems.</p>
-              </div>
-            </div>
-            <div class="col">
-              <div><i class="fab fa-php skill-icon"></i><strong>PHP</strong>
-                <p>Experience in legacy systems and modern PHP frameworks.</p>
-              </div>
-            </div>
-            <div class="col">
-              <div><i class="fab fa-npm skill-icon"></i><strong>npm, Gulp & Grunt</strong>
-                <p>Automation and package management tools for dev workflow.</p>
+              <div><i class="fab fa-python skill-icon"></i><strong>Python</strong>
+                <p>Automação de processos e web scraping com foco em eficiência e escala.</p>
               </div>
             </div>
             <div class="col">
               <div><i class="fab fa-html5 skill-icon"></i><strong>HTML & CSS</strong>
-                <p>Semantic, accessible and responsive web design.</p>
-              </div>
-            </div>
-            <div class="col">
-              <div><i class="fab fa-sass skill-icon"></i><strong>Sass & LESS</strong>
-                <p>Advanced CSS preprocessor capabilities for styling.</p>
+                <p>Web design semântico, acessível e responsivo.</p>
               </div>
             </div>
           </div>
