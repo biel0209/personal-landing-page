@@ -7,7 +7,10 @@
   <title>Marcus Melo | Dev</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
   <style>
     body {
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
@@ -23,76 +26,100 @@
     }
 
     .menu {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: start;
       gap: 20px;
       padding-left: 26px;
+      z-index: 999;
     }
 
     .menu-item {
       display: flex;
       align-items: center;
-      gap: 10px;
       text-decoration: none;
       color: inherit;
       background-color: transparent;
       font-weight: 400;
       font-size: large;
       border-radius: 50px;
-      padding: 5px;
       cursor: pointer;
-      width: 56px;
-      transition: width 0.3s ease;
+      width: 67px;
+      transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
       overflow: hidden;
-    }
-
-    .menu-item:hover {
-      width: 140px;
     }
 
     .menu-icon {
       font-size: 1.6rem;
-      background-color: rgba(128, 128, 128, 0.15);
-      padding: 10px;
+      background-color: color-mix(in srgb, #272829, transparent 92%);
+      padding: 16px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      color: #45505b;
     }
 
-    .menu-item:hover{
+    .menu-item:hover {
       background-color: #7462fd;
       color: white;
+      width: 140px;
+    }
+
+    .menu-item:hover .menu-icon {
+      background-color: inherit;
+      color: inherit;
     }
 
     .menu-text {
       opacity: 0;
       white-space: nowrap;
-      transition: opacity 0.3s ease;
     }
 
     .menu-item:hover .menu-text {
       opacity: 1;
     }
 
+
     .main-content {
       padding: 2rem;
+      margin-left: 160px;
     }
 
-    .section-title {
-      border-left: 5px solid #7462fd;
-      padding-left: 1rem;
+    .title {
       margin-bottom: 1rem;
       font-weight: bold;
+      color: #45505b;
     }
 
-    .skill-icon {
-      font-size: 1.5rem;
+    .skill-img {
       margin-right: 0.5rem;
-      color: #7462fd;
+      width: 2rem;
+    }
+
+    .carousel-item {
+      min-height: 300px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      background-color: #0056b3;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+
+    .custom-hr {
+      height: 3px;
+      background-color: #7462fd;
+      border: none;
+      max-width: 100px;
+      margin-top: 0px;
     }
   </style>
 </head>
@@ -104,35 +131,28 @@
       <div class="col-md-2 menu">
         <!-- Home -->
         <a class="menu-item" href="#">
-          <span class="material-symbols-outlined menu-icon">home</span>
+          <i class="bi bi-house menu-icon"></i>
           <span class="menu-text">Home</span>
         </a>
 
         <!-- Sobre -->
         <a class="menu-item" href="#">
-          <span class="material-symbols-outlined menu-icon">person</span>
+          <i class="bi bi-person menu-icon"></i>
           <span class="menu-text">Sobre</span>
         </a>
 
         <!-- Projetos -->
         <a class="menu-item" href="#">
-          <span class="material-symbols-outlined menu-icon">description</span>
+          <i class="bi bi-code-slash menu-icon"></i>
           <span class="menu-text">Projetos</span>
         </a>
 
         <!-- Contato -->
         <a class="menu-item" href="#">
-          <span class="material-symbols-outlined menu-icon">mail</span>
+          <i class="bi bi-envelope menu-icon"></i>
           <span class="menu-text">Contato</span>
         </a>
       </div>
-
-
-
-
-
-
-
       <!-- Main Content -->
       <div class="col-md-10 main-content">
         <h1>Marcus Melo</h1>
@@ -150,42 +170,163 @@
           <a class="btn btn-dark" href="#">Currículo</a>
         </div>
 
-        <div>
-          <h3 class="section-title">Tecnologias e Competências</h3>
+        <div class="container mb-5">
+          <div class="container text-center mb-5">
+            <h2 class="title">Tecnologias e Competências</h2>
+            <hr class="custom-hr mx-auto">
+          </div>
+
+
           <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
             <div class="col">
-              <div><i class="fab fa-js skill-icon"></i><strong>JavaScript e TypeScript</strong>
-                <p>Desenvolvimento ágil com JS e robustez com TS.</p>
+              <div class="d-flex align-items-center mb-0">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  class="skill-img" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                  class="skill-img" />
               </div>
+              </i><strong>JavaScript & TypeScript</strong>
+              <p>Desenvolvimento ágil com JS e robustez com TS.</p>
             </div>
             <div class="col">
-              <div><i class="fab fa-react skill-icon"></i><strong>React & Vue</strong>
-                <p>Interfaces dinâmicas e modernas com os principais frameworks de front-end.</p>
+              <div class="d-flex align-items-center mb-0">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                  class="skill-img" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
+                  class="skill-img" />
               </div>
+              </i><strong>React & Vue</strong>
+              <p>Interfaces dinâmicas e modernas com os principais frameworks de front-end.</p>
             </div>
             <div class="col">
-              <div><i class="fab fa-node-js skill-icon"></i><strong>Node.js</strong>
-                <p>Desenvolvimento do lado do servidor para aplicações de backend escaláveis.</p>
+              <div class="d-flex align-items-center mb-0">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                  class="skill-img" />
               </div>
+              <strong>Node.js</strong>
+              <p>Desenvolvimento do lado do servidor para aplicações de backend escaláveis.</p>
             </div>
             <div class="col">
-              <div><i class="fab fa-python skill-icon"></i><strong>Python</strong>
-                <p>Automação de processos e web scraping com foco em eficiência e escala.</p>
+              <div class="d-flex align-items-center mb-0">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                  class="skill-img" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg"
+                  class="skill-img" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg"
+                  class="skill-img" />
               </div>
+              <strong>Python, Selenium & Playwrigth</strong>
+              <p>Automação de processos e web scraping com foco em eficiência e escala.</p>
             </div>
             <div class="col">
-              <div><i class="fab fa-html5 skill-icon"></i><strong>HTML & CSS</strong>
+              <div><i class="fab fa-html5 skill-img"></i><strong>HTML & CSS</strong>
                 <p>Web design semântico, acessível e responsivo.</p>
               </div>
             </div>
           </div>
         </div>
 
+        <section id="testimonials">
+          <div class="container text-center mb-5">
+            <h2 class="title">Depoimentos</h2>
+            <hr class="custom-hr mx-auto">
+          </div>
+
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <div class="row align-items-center justify-content-center px-3">
+                  <!-- Texto -->
+                  <div class="col-md-8 d-flex">
+                    <div class="border-start border-3 ps-4" style="border-color: #7462fd !important;">
+                      <p class="text-muted fs-6">
+                        <i class="bi bi-quote fs-2" style="color: #7462fd"></i>
+                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
+                        minim
+                        tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                        <i class="bi bi-quote fs-2" style="color: #7462fd"></i>
+                      </p>
+                      <h5 class="fw-bold mb-0">Jena Karlis</h5>
+                      <small class="text-muted">Store Owner</small>
+                      <div class="text-warning mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Foto -->
+                  <div class="col-md-3 text-center">
+                    <img src="public/img/selfie.jpg" class="rounded-circle img-fluid" style="max-width: 150px;"
+                      alt="Foto Jena Karlis">
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row align-items-center justify-content-center px-3">
+                  <!-- Texto -->
+                  <div class="col-md-8 d-flex">
+                    <div class="border-start border-3 ps-4" style="border-color: #7462fd !important;">
+                      <p class="text-muted fs-6">
+                        <i class="bi bi-quote fs-2" style="color: #7462fd"></i>
+                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
+                        minim
+                        tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                        <i class="bi bi-quote fs-2" style="color: #7462fd"></i>
+                      </p>
+                      <h5 class="fw-bold mb-0">Jena Karlis</h5>
+                      <small class="text-muted">Store Owner</small>
+                      <div class="text-warning mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Foto -->
+                  <div class="col-md-3 text-center">
+                    <img src="public/img/selfie.jpg" class="rounded-circle img-fluid" style="max-width: 150px;"
+                      alt="Foto Jena Karlis">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Adicione mais .carousel-item conforme necessário -->
+
+            </div>
+
+            <!-- Bullets -->
+            <div class="carousel-indicators mt-4">
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </section>
+
+
+
       </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+
+    const testimonialCarousel = new bootstrap.Carousel('#testimonialCarousel', {
+      interval: 3000,
+      ride: 'carousel'
+    });
+
+  </script>
 </body>
 
 </html>
