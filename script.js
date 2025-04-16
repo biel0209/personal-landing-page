@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const testimonialCarousel = new bootstrap.Carousel('#testimonialCarousel', {
-    interval: 5000,
+    interval: 10000,
     ride: 'carousel'
   });
 });
