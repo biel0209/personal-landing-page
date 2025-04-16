@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,120 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-  <style>
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
-      background-color: #f8f9fa;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .sidebar {
-      background-color: #7462fd;
-      color: white;
-      height: 100vh;
-      padding: 2rem 1rem;
-    }
-
-    .menu {
-      position: fixed;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: start;
-      gap: 20px;
-      padding-left: 26px;
-      z-index: 999;
-    }
-
-    .menu-item {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: inherit;
-      background-color: transparent;
-      font-weight: 400;
-      font-size: large;
-      border-radius: 50px;
-      cursor: pointer;
-      width: 67px;
-      transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
-      overflow: hidden;
-    }
-
-    .menu-icon {
-      font-size: 1.6rem;
-      background-color: color-mix(in srgb, #272829, transparent 92%);
-      padding: 16px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #45505b;
-    }
-
-    .menu-item:hover {
-      background-color: #7462fd;
-      color: white;
-      width: 140px;
-    }
-
-    .menu-item:hover .menu-icon {
-      background-color: inherit;
-      color: inherit;
-    }
-
-    .menu-text {
-      opacity: 0;
-      white-space: nowrap;
-    }
-
-    .menu-item:hover .menu-text {
-      opacity: 1;
-    }
-
-
-    .main-content {
-      padding: 2rem;
-      margin-left: 160px;
-    }
-
-    .title {
-      margin-bottom: 1rem;
-      font-weight: bold;
-      color: #45505b;
-    }
-
-    .skill-img {
-      margin-right: 0.5rem;
-      width: 2rem;
-    }
-
-    .carousel-item {
-      min-height: 300px;
-    }
-
-    .carousel-indicators [data-bs-target] {
-      background-color: #0056b3;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      margin: 0 5px;
-    }
-
-    .custom-hr {
-      height: 3px;
-      background-color: #7462fd;
-      border: none;
-      max-width: 100px;
-      margin-top: 0px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -147,6 +35,12 @@
           <span class="menu-text">Projetos</span>
         </a>
 
+        <!-- Feedbacks -->
+        <a class="menu-item" href="#">
+          <i class="bi bi-quote menu-icon"></i>
+          <span class="menu-text">Feedbacks</span>
+        </a>
+
         <!-- Contato -->
         <a class="menu-item" href="#">
           <i class="bi bi-envelope menu-icon"></i>
@@ -155,30 +49,41 @@
       </div>
       <!-- Main Content -->
       <div class="col-md-10 main-content">
-        <h1>Marcus Melo</h1>
-        <h5 class="text-muted">Desenvolvedor de Software</h5>
-        <p>Sou Desenvolvedor de Software apaixonado por tecnologia, design limpo e soluções eficientes. Possuo
-          experiência em projetos que vão
-          desde a integração de sistemas corporativos até o
-          desenvolvimento
-          de chatbots e sistemas de gestão personalizados. Acredito em tecnologia como
-          ferramenta para simplificar
-          processos e gerar valor real para as organizações. Quer saber como posso ajudar no seu projeto? Confira meu
-          portfólio e currículo online.</p>
+        <div class="row d-flex align-items-center">
+          <div class="col-md-3">
+            <img src="public/img/selfie.jpg" class="rounded-circle img-fluid" style="max-width: 200px;"
+              alt="Foto Marcus Melo">
+          </div>
+          <div class="col">
+            <h2 style="font-weight: bold; color: #45505b;">Marcus Melo</h2>
+            <h5 class="text-muted">Desenvolvedor de Software</h5>
+            <p>Sou Desenvolvedor de Software apaixonado por tecnologia, design limpo e soluções eficientes. Possuo
+              experiência em projetos que vão
+              desde a integração de sistemas corporativos até o
+              desenvolvimento
+              de chatbots e sistemas de gestão personalizados. Acredito em tecnologia como
+              ferramenta para simplificar
+              processos e gerar valor real para as organizações. Quer saber como posso ajudar no seu projeto? Confira
+              meu
+              portfólio e currículo online.</p>
+
+          </div>
+        </div>
         <div class="d-flex gap-2 mb-4">
           <a class="btn btn-success" href="#">Portfólio</a>
           <a class="btn btn-dark" href="#">Currículo</a>
         </div>
 
-        <div class="container mb-5">
+        <section id="skills" class="container mb-5">
           <div class="container text-center mb-5">
-            <h2 class="title">Tecnologias e Competências</h2>
+            <h2 class="title">Habilidades</h2>
             <hr class="custom-hr mx-auto">
           </div>
 
 
-          <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
-            <div class="col">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3">
+
+            <div class="col-3">
               <div class="d-flex align-items-center mb-0">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
                   class="skill-img" />
@@ -188,7 +93,7 @@
               </i><strong>JavaScript & TypeScript</strong>
               <p>Desenvolvimento ágil com JS e robustez com TS.</p>
             </div>
-            <div class="col">
+            <div class="col-3">
               <div class="d-flex align-items-center mb-0">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
                   class="skill-img" />
@@ -198,7 +103,7 @@
               </i><strong>React & Vue</strong>
               <p>Interfaces dinâmicas e modernas com os principais frameworks de front-end.</p>
             </div>
-            <div class="col">
+            <div class="col-3">
               <div class="d-flex align-items-center mb-0">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
                   class="skill-img" />
@@ -219,16 +124,46 @@
               <p>Automação de processos e web scraping com foco em eficiência e escala.</p>
             </div>
             <div class="col">
-              <div><i class="fab fa-html5 skill-img"></i><strong>HTML & CSS</strong>
-                <p>Web design semântico, acessível e responsivo.</p>
+              <div class="d-flex align-items-center mb-0">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                  class="skill-img" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                  class="skill-img" />
               </div>
+              <strong>HTML & CSS</strong>
+              <p>Web design semântico, acessível e responsivo.</p>
+            </div>
+            <div class="col">
+              <div class="d-flex align-items-center mb-0">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg"
+                  class="skill-img" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitest/vitest-original.svg"
+                  class="skill-img" />
+              </div>
+              <strong>Cypress & Vitest</strong>
+              <p>Testes unitários e end-to-end automatizados</p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <section id="testimonials">
+        <section id="profissional-projects" class="container mb-5">
           <div class="container text-center mb-5">
-            <h2 class="title">Depoimentos</h2>
+            <h2 class="title">Projetos Profissionais</h2>
+            <hr class="custom-hr mx-auto">
+          </div>
+        </section>
+
+        <section id="academic-projects" class="container mb-5">
+          <div class="container text-center mb-5">
+            <h2 class="title">Projetos Acadêmicos</h2>
+            <hr class="custom-hr mx-auto">
+          </div>
+        </section>
+
+
+        <section id="testimonials" class="container mb-5">
+          <div class="container text-center mb-5">
+            <h2 class="title">Feedbacks</h2>
             <hr class="custom-hr mx-auto">
           </div>
 
@@ -239,16 +174,20 @@
                 <div class="row align-items-center justify-content-center px-3">
                   <!-- Texto -->
                   <div class="col-md-8 d-flex">
-                    <div class="border-start border-3 ps-4" style="border-color: #7462fd !important;">
-                      <p class="text-muted fs-6">
-                        <i class="bi bi-quote fs-2" style="color: #7462fd"></i>
-                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
-                        minim
-                        tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                        <i class="bi bi-quote fs-2" style="color: #7462fd"></i>
+                    <div class="border-start border-3 ps-4" style="border-color: #7462fde0 !important;">
+                      <p style="text-align: justify;">
+                        <i class="fa-solid fa-quote-left fs-4" style="color: #7462fde0;"></i>
+                        <span>Marcus é um cara muito tranquilo de se trabalhar. É aquele tipo de pessoa que te faz
+                          sentir
+                          alívio de tê-la no seu time porque é muito fácil de lidar; é objetivo, dedicado, se comunica
+                          bem, é interessado, se coloca na linha de frente pra resolver o problema e sempre dá um jeito,
+                          tem o <em>"se-vira-ômetro"</em> alto e um ótimo senso de completude, além da incrível
+                          capacidade técnica.
+                          Gostaria sempre de trabalhar junto com ele.</span>
+                        <i class="fa-solid fa-quote-right fs-4" style="color: #7462fde0;"></i>
                       </p>
-                      <h5 class="fw-bold mb-0">Jena Karlis</h5>
-                      <small class="text-muted">Store Owner</small>
+                      <h5 class="fw-bold mb-0">João Reis</h5>
+                      <small class="text-muted">Desenvolvedor</small>
                       <div class="text-warning mt-2">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -260,8 +199,8 @@
                   </div>
                   <!-- Foto -->
                   <div class="col-md-3 text-center">
-                    <img src="public/img/selfie.jpg" class="rounded-circle img-fluid" style="max-width: 150px;"
-                      alt="Foto Jena Karlis">
+                    <img src="public/img/joao.jpg" class="rounded-circle img-fluid" style="max-width: 150px;"
+                      alt="Foto João Reis">
                   </div>
                 </div>
               </div>
@@ -270,16 +209,16 @@
                 <div class="row align-items-center justify-content-center px-3">
                   <!-- Texto -->
                   <div class="col-md-8 d-flex">
-                    <div class="border-start border-3 ps-4" style="border-color: #7462fd !important;">
-                      <p class="text-muted fs-6">
-                        <i class="bi bi-quote fs-2" style="color: #7462fd"></i>
-                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
-                        minim
-                        tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                        <i class="bi bi-quote fs-2" style="color: #7462fd"></i>
+                    <div class="border-start border-3 ps-4" style="border-color: #7462fde0 !important;">
+                      <p style="text-align: justify;">
+                        <i class="fa-solid fa-quote-left fs-4" style="color: #7462fde0;"></i>
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error quas beatae id
+                          accusantium qui quis nemo mollitia. Quidem totam consectetur aspernatur maxime et corrupti
+                          similique recusandae dolore odio assumenda.</span>
+                        <i class="fa-solid fa-quote-right fs-4" style="color: #7462fde0;"></i>
                       </p>
-                      <h5 class="fw-bold mb-0">Jena Karlis</h5>
-                      <small class="text-muted">Store Owner</small>
+                      <h5 class="fw-bold mb-0">César Costa</h5>
+                      <small class="text-muted">Desenvolvedor</small>
                       <div class="text-warning mt-2">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -291,13 +230,44 @@
                   </div>
                   <!-- Foto -->
                   <div class="col-md-3 text-center">
-                    <img src="public/img/selfie.jpg" class="rounded-circle img-fluid" style="max-width: 150px;"
-                      alt="Foto Jena Karlis">
+                    <img src="public/img/cesar.jpg" class="rounded-circle img-fluid" style="max-width: 150px;"
+                      alt="Foto César Costa">
                   </div>
                 </div>
               </div>
 
-              <!-- Adicione mais .carousel-item conforme necessário -->
+              <div class="carousel-item">
+                <div class="row align-items-center justify-content-center px-3">
+                  <!-- Texto -->
+                  <div class="col-md-8 d-flex">
+                    <div class="border-start border-3 ps-4" style="border-color: #7462fde0 !important;">
+                      <p style="text-align: justify;">
+                        <i class="fa-solid fa-quote-left fs-4" style="color: #7462fde0;"></i>
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam libero ipsum eaque neque
+                          atque quas iure autem omnis ullam nam nemo sunt suscipit harum dolorum nulla ratione,
+                          dignissimos, debitis odit.</span>
+                        <i class="fa-solid fa-quote-right fs-4" style="color: #7462fde0;"></i>
+                      </p>
+                      <h5 class="fw-bold mb-0">Deborah Moraes</h5>
+                      <small class="text-muted">Coordenadora de Inovação e Projetos</small>
+                      <div class="text-warning mt-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Foto -->
+                  <div class="col-md-3 text-center">
+                    <img src="public/img/deborah.jpg" class="rounded-circle img-fluid" style="max-width: 150px;"
+                      alt="Foto Deborah Moraes">
+                  </div>
+                </div>
+              </div>
+
+
 
             </div>
 
@@ -319,14 +289,9 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 
-    const testimonialCarousel = new bootstrap.Carousel('#testimonialCarousel', {
-      interval: 3000,
-      ride: 'carousel'
-    });
-
-  </script>
 </body>
 
 </html>
