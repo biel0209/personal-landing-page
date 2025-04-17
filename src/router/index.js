@@ -14,7 +14,7 @@ export default createRouter({
     if (to.hash) {
       return {
         el: to.hash,
-        behavior: 'smooth' // rolagem suave
+        behavior: 'smooth'
       }
     } else if (savedPosition) {
       return savedPosition
