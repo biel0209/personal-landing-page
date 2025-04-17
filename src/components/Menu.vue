@@ -3,35 +3,47 @@
 
 <template>
   <div class="col-md-2 menu">
-    <!-- Home -->
-    <a class="menu-item" href="index.html">
+
+    <router-link :to="{ path: '/', hash: '#home' }" tag="a" class="menu-item">
       <i class="bi bi-house menu-icon"></i>
       <span class="menu-text">Início</span>
-    </a>
+    </router-link>
 
     <!-- Sobre -->
-    <a class="menu-item" href="#">
+    <router-link :to="{ path: '/', hash: '#about' }" tag="a" class="menu-item">
       <i class="bi bi-person menu-icon"></i>
       <span class="menu-text">Sobre</span>
-    </a>
+    </router-link>
+
+    <!-- Habilidades -->
+    <router-link :to="{ path: '/', hash: '#skills' }" tag="a" class="menu-item">
+      <i class="bi bi-award menu-icon"></i>
+      <span class="menu-text">Skills</span>
+    </router-link>
+
+    <!-- Timeline -->
+    <router-link :to="{ path: '/', hash: '#timeline' }" tag="a" class="menu-item">
+      <i class="bi bi-bar-chart-steps menu-icon"></i>
+      <span class="menu-text">Timeline</span>
+    </router-link>
 
     <!-- Projetos -->
-    <a class="menu-item" href="#">
+    <router-link :to="{ path: '/', hash: '#featured-projects' }" tag="a" class="menu-item">
       <i class="bi bi-code-slash menu-icon"></i>
       <span class="menu-text">Projetos</span>
-    </a>
+    </router-link>
 
     <!-- Feedbacks -->
-    <a class="menu-item" href="#">
+    <router-link :to="{ path: '/', hash: '#feedbacks' }" tag="a" class="menu-item">
       <i class="bi bi-quote menu-icon"></i>
       <span class="menu-text">Feedbacks</span>
-    </a>
+    </router-link>
 
     <!-- Contato -->
-    <a class="menu-item" href="#">
+    <router-link :to="{ path: '/', hash: '#contact' }" tag="a" class="menu-item">
       <i class="bi bi-envelope menu-icon"></i>
       <span class="menu-text">Contato</span>
-    </a>
+    </router-link>
   </div>
 </template>
 

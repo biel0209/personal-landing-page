@@ -28,10 +28,6 @@ h3 {
   color: #45505b;
 }
 
-.skill-img {
-  margin-right: 1rem;
-  width: 3rem;
-}
 
 .custom-hr {
   height: 3px;
@@ -42,82 +38,11 @@ h3 {
 }
 
 
-.project-card {
-  border-radius: 0;
-  background: inherit;
-  border: 1px solid rgba(0, 0, 0, 0.025);
-  position: relative;
-  height: 100%;
-}
 
-.project-card:hover .link-mask {
-  visibility: visible;
-  background: rgba(41, 41, 41, 0.5);
-}
 
-.project-card:hover .link-mask-text {
-  display: block;
-}
 
-.project-card .card-img {
-  border-radius: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
 
-.project-card .card-title {
-  font-size: 1.125rem;
-}
 
-.project-card .card-text {
-  font-size: 0.875rem;
-}
-
-.project-card .card-img-holder {
-  max-height: 200px;
-  overflow: hidden;
-  vertical-align: middle;
-}
-
-.project-card .link-mask {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  border-radius: 16px;
-}
-
-.project-card .link-mask .link-mask-link {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.project-card .link-mask-text {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  vertical-align: middle;
-  color: #fff;
-  display: none;
-}
-
-.project-card .link-mask-text .btn {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-top: 0px;
-}
 
 
 .cta-section .heading {
@@ -125,26 +50,6 @@ h3 {
   font-weight: bold
 }
 
-.project-meta {
-  border: 1px solid rgba(0, 0, 0, 0.025);
-  font-size: 0.875rem
-}
-
-.project-meta .client-name {
-  font-size: 1.5rem
-}
-
-.project-meta .subheading {
-  font-size: 1rem
-}
-
-.project-meta .client-meta {
-  font-size: 1rem
-}
-
-.project-meta .client-meta .svg-inline--fa {
-  color: #4f4f4f
-}
 
 .metric .inner {
   border: 1px solid rgba(0, 0, 0, 0.025);
@@ -215,55 +120,4 @@ h3 {
   position: absolute;
   left: 0;
   top: 0
-}
-
-.timeline {
-  position: relative;
-  margin-left: 20px;
-  padding-left: 30px;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 15px;
-  /* centraliza com os marcadores */
-  width: 2px;
-  height: 100%;
-  background-color: var(--primary-color);
-  z-index: 0;
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 3rem;
-}
-
-.timeline-marker {
-  position: absolute;
-  top: 5px;
-  left: 7px;
-  /* centraliza com a linha */
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: white;
-  border: 2px solid var(--primary-color);
-  z-index: 1;
-}
-
-.timeline-content {
-  margin-left: 40px;
-}
-
-.timeline-content h3 {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.timeline-date {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.5rem;
 }

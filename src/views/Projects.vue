@@ -7,7 +7,7 @@ import { projects } from '../data/projects'
 import About from '../components/About.vue'
 import Timeline from '../components/Timeline.vue'
 
-function animationWritingInit() {
+function iniciarAnimacaoDigitacao() {
   const words = ["tecnologia.", "código limpo.", "soluções inteligentes."]
   const typingTarget = document.getElementById("typing-word")
 
@@ -41,7 +41,7 @@ function animationWritingInit() {
   typeEffect()
 }
 
-function carrouselInit() {
+function iniciarCarrossel() {
   new bootstrap.Carousel('#testimonialCarousel', {
     interval: 10000,
     ride: 'carousel'
@@ -49,8 +49,8 @@ function carrouselInit() {
 }
 
 onMounted(() => {
-  carrouselInit();
-  animationWritingInit();
+  iniciarCarrossel()
+  iniciarAnimacaoDigitacao()
 })
 
 </script>
@@ -60,7 +60,7 @@ onMounted(() => {
   <div id="home">
 
     <section
-      class="hero-section reveal-up position-relative text-white d-flex align-items-center justify-content-center text-center px-3">
+      class="hero-section position-relative text-white d-flex align-items-center justify-content-center text-center px-3">
       <div class="overlay"></div> <!-- camada escura -->
       <div class="content d-flex flex-column align-items-center justify-content-center">
         <h1 class="display-4 fw-bold mb-4">Marcus Melo</h1>

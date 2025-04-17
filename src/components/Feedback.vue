@@ -41,7 +41,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="testimonials" class="container mb-5">
+  <section id="feedbacks" class="reveal-up container mb-5">
     <div class="container text-center mb-5">
       <h2 class="title">Feedbacks</h2>
       <hr class="custom-hr mx-auto" />
@@ -62,7 +62,7 @@ onMounted(() => {
                 <h5 class="fw-bold mb-0">{{ t.name }}</h5>
                 <small class="text-muted">{{ t.position }}</small>
                 <div class="text-warning mt-2">
-                  <i class="fa-solid fa-star" v-for="n in t.score" :key="`star-${i}-${n}`" />
+                  <i class="fa-solid fa-star me-1" v-for="n in t.score" :key="`star-${i}-${n}`" />
                 </div>
               </div>
             </div>
