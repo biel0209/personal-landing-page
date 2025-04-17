@@ -1,11 +1,39 @@
+:root {
+  --primary-color: #0563bb;
+  --secondary-color: #4083d2;
+}
+
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
   background-color: #f8f9fa;
   transition: background 0.3s, color 0.3s;
 }
 
+
+.hero-section {
+  background-image: url("/public/img/background8.jpg"); /* caminho relativo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1;
+}
+
+.hero-section .content {
+  z-index: 2;
+  /* padding-left: 500px; */
+  /* padding-right: 200px; */
+  /* padding-bottom: 500px; */
+}
+
 .sidebar {
-  background-color: #7462fd;
+  background-color: var(--primary-color);
   color: white;
   height: 100vh;
   padding: 2rem 1rem;
@@ -41,18 +69,21 @@ body {
 }
 
 .menu-icon {
-  font-size: 1.6rem;
-  background-color: color-mix(in srgb, #272829, transparent 92%);
+  font-size: 1.3rem;
+  /* background-color: color-mix(in srgb, #272829, transparent 92%); */
+  background-color: color-mix(in srgb, #f8f9fa, transparent 25%);
+  /* background-color: #f8f9fa; */
   padding: 16px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* color: #45505b; */
   color: #45505b;
 }
 
 .menu-item:hover {
-  background-color: #7462fd;
+  background-color: var(--primary-color);
   color: white;
   width: 150px;
 }
@@ -102,7 +133,7 @@ body {
 
 .custom-hr {
   height: 3px;
-  background-color: #7462fd;
+  background-color: var(--primary-color);
   border: none;
   max-width: 100px;
   margin-top: 0px;
@@ -224,7 +255,7 @@ body {
 }
 
 .metric-name {
-  color: #7462fd;
+  color: var(--primary-color);
   font-weight: bold
 }
 
@@ -257,7 +288,7 @@ body {
   height: 0;
   border-style: solid;
   border-width: 40px 40px 0 0;
-  border-color: #7462fd transparent transparent transparent;
+  border-color: var(--primary-color) transparent transparent transparent;
   -webkit-transform: rotate(360deg)
 }
 
@@ -297,7 +328,7 @@ body {
   left: 15px; /* centraliza com os marcadores */
   width: 2px;
   height: 100%;
-  background-color: #7462fd;
+  background-color: var(--primary-color);
   z-index: 0;
 }
 
@@ -314,7 +345,7 @@ body {
   height: 16px;
   border-radius: 50%;
   background-color: white;
-  border: 2px solid #7462fd;
+  border: 2px solid var(--primary-color);
   z-index: 1;
 }
 
