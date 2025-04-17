@@ -17,124 +17,6 @@ h3 {
   font-family: 'Montserrat';
 }
 
-
-.hero-section {
-  background-image: url("/public/img/background8.jpg");
-  /* caminho relativo */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
-
-.hero-section h1 {
-  font-size: 64px;
-  font-weight: 700;
-}
-
-.hero-section .overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
-}
-
-.hero-section .content {
-  z-index: 2;
-  /* padding-left: 500px; */
-  /* padding-right: 200px; */
-  /* padding-bottom: 500px; */
-}
-
-#typing-word::after {
-  content: '|';
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
-
-.sidebar {
-  background-color: var(--primary-color);
-  color: white;
-  height: 100vh;
-  padding: 2rem 1rem;
-}
-
-.menu {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 20px;
-  padding-left: 26px;
-  z-index: 999;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-  background-color: transparent;
-  font-weight: 400;
-  font-size: large;
-  border-radius: 50px;
-  cursor: pointer;
-  width: 67px;
-  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  overflow: hidden;
-}
-
-.menu-icon {
-  font-size: 1.3rem;
-  /* background-color: color-mix(in srgb, #272829, transparent 92%); */
-  background-color: color-mix(in srgb, #f8f9fa, transparent 25%);
-  /* background-color: #f8f9fa; */
-  padding: 16px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* color: #45505b; */
-  color: #45505b;
-}
-
-.menu-item:hover {
-  background-color: var(--primary-color);
-  color: white;
-  width: 160px;
-}
-
-.menu-item:hover .menu-icon {
-  background-color: inherit;
-  color: inherit;
-}
-
-.menu-text {
-  opacity: 0;
-  white-space: nowrap;
-}
-
-.menu-item:hover .menu-text {
-  opacity: 1;
-}
-
-
 .main-content {
   padding: 2rem;
   margin-left: 160px;
@@ -149,18 +31,6 @@ h3 {
 .skill-img {
   margin-right: 1rem;
   width: 3rem;
-}
-
-.carousel-item {
-  min-height: 300px;
-}
-
-.carousel-indicators [data-bs-target] {
-  background-color: #0056b3;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: 0 5px;
 }
 
 .custom-hr {
@@ -321,7 +191,6 @@ h3 {
   border-style: solid;
   border-width: 40px 40px 0 0;
   border-color: var(--primary-color) transparent transparent transparent;
-  -webkit-transform: rotate(360deg)
 }
 
 .client-quote .source-profile img {
