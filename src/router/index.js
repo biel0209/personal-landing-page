@@ -8,7 +8,7 @@ const routes = [
 ]
 
 export default createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory('/personal-landing-page/'),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
