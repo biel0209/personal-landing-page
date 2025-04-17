@@ -38,6 +38,20 @@ h3 {
 }
 
 
+.reveal-up {
+  opacity: 0;
+  transform: translateY(20px); /* Inicia um pouco abaixo da tela */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0); /* Elemento se move para a posição original */
+}
+
+.reveal-up.upwards {
+  transform: translateY(-20px); /* Para rolar de cima para baixo, o valor negativo começa acima da tela */
+}
 
 
 

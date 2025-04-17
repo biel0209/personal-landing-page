@@ -48,9 +48,44 @@ function carrouselInit() {
   })
 }
 
+function initScrollAnimations() {
+  const reveals = document.querySelectorAll('.reveal-up');
+
+  // Função para aplicar a animação dependendo da direção do scroll
+  const applyAnimation = (entry) => {
+    if (entry.isIntersecting) {
+      // Detecta a direção do scroll e aplica a classe de animação correspondente
+      if (entry.boundingClientRect.top < 0) {
+        // Scroll para baixo: o efeito "subindo"
+        entry.target.classList.add('visible');
+        entry.target.classList.remove('upwards');
+      } else {
+        // Scroll para cima: o efeito "descendo"
+        entry.target.classList.add('visible', 'upwards');
+      }
+    }
+  };
+
+  // Observador de entrada
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      applyAnimation(entry);
+    });
+  }, {
+    threshold: 0.3, // Pode ajustar conforme necessário
+  });
+
+  reveals.forEach(el => {
+    observer.observe(el);
+  });
+}
+
+
+
 onMounted(() => {
   carrouselInit();
   animationWritingInit();
+  initScrollAnimations();
 })
 
 </script>
@@ -60,7 +95,7 @@ onMounted(() => {
   <div id="home">
 
     <section
-      class="hero-section reveal-up position-relative text-white d-flex align-items-center justify-content-center text-center px-3">
+      class="hero-section position-relative text-white d-flex align-items-center justify-content-center text-center px-3">
       <div class="overlay"></div> <!-- camada escura -->
       <div class="content d-flex flex-column align-items-center justify-content-center">
         <h1 class="display-4 fw-bold mb-4">Marcus Melo</h1>
