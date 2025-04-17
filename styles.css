@@ -117,7 +117,7 @@ h3 {
 .menu-item:hover {
   background-color: var(--primary-color);
   color: white;
-  width: 150px;
+  width: 160px;
 }
 
 .menu-item:hover .menu-icon {
