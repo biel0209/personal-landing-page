@@ -54,7 +54,7 @@ const skills = [
 </script>
 
 <template>
-  <section id="skills" class="reveal-up container mb-5">
+  <section id="skills" class="reveal-up container mb-5 pt-5">
     <div class="container text-center mb-5">
       <h2 class="title">Skills</h2>
       <hr class="custom-hr mx-auto">

@@ -1,11 +1,11 @@
 <script setup>
-import Feedback from '../components/Feedback.vue'
-import Skills from '../components/Skills.vue'
+import Feedback from '../../components/Feedback.vue'
+import Skills from '../../components/Skills.vue'
 import { onMounted } from 'vue'
-import Projects from '../components/Projects.vue'
-import { projects } from '../data/projects'
-import About from '../components/About.vue'
-import Timeline from '../components/Timeline.vue'
+import Projects from '../../components/Projects.vue'
+import { projects } from '../../data/projects'
+import About from '../../components/About.vue'
+import Timeline from '../../components/Timeline.vue'
 
 function iniciarAnimacaoDigitacao() {
   const words = ["tecnologia.", "código limpo.", "soluções inteligentes."]

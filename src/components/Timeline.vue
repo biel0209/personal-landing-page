@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section id="timeline" class="reveal-up container mb-5 d-flex flex-column align-items-start">
+  <section id="timeline" class="reveal-up container mb-5 d-flex flex-column align-items-start pt-5" >
 
     <div class="container text-center mb-5 ">
       <h2 class="title">Timeline</h2>

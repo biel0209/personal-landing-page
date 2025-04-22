@@ -1,10 +1,12 @@
 import { createWebHistory, createRouter } from 'vue-router'
 import Home from '../views/Home.vue'
-import Projects from '../views/Projects.vue'
+import Projects from '../views/Projects/Projects.vue'
+import PricingApp from '../views/Projects/PricingApp.vue'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/projects', component: Projects },
+  { path: '/project', component: Projects },
+  { path: '/project/pricing-app', component: PricingApp },
 ]
 
 export default createRouter({

@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-  <section id="featured-projects" class="reveal-up container mb-5">
+  <section id="featured-projects" class="reveal-up container mb-5 pt-5">
     <div v-if="inHome" class="container text-center mb-5">
       <h2 class="title">Projetos em destaque</h2>
       <hr class="custom-hr mx-auto">
@@ -22,7 +22,7 @@ defineProps({
         <div class="card project-card">
           <div class="row no-gutters">
             <div class="col-12 col-xl-5 card-img-holder">
-              <img :src="`/img/projects/${project.img}`" class="card-img" :alt="project.title">
+              <img :src="`${project.img}`" class="card-img" :alt="project.title">
             </div>
             <div class="col-12 col-xl-7">
               <div class="card-body">
