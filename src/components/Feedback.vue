@@ -11,7 +11,7 @@ const testimonials = [
       "O Marcus é um desenvolvedor que se destaca pela capacidade de identificar problemas e propor melhorias de forma clara, objetiva e alinhada às necessidades do time. Sua contribuição tem sido fundamental para a evolução da área de desenvolvimento, e sua trajetória demonstra uma evolução profissional notável. Executa suas tarefas com eficácia, qualidade e comprometimento com prazos, sempre demonstrando um entendimento profundo dos processos envolvidos. Participa ativamente da construção e evolução do sistema de precificação da Nextios, hoje utilizado por toda a empresa. Mesmo diante de desafios ou temas que ainda não domina, Marcus assume a responsabilidade, estuda, aprende e entrega. É um profissional confiável, resiliente e com uma postura exemplar dentro da equipe.",
   },
   {
-    name: "Cesar Costa",
+    name: "César Costa",
     position: "Desenvolvedor - Nextios",
     score: 5,
     img: `img/cesar.jpg`,
