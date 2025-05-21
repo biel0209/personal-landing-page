@@ -6,7 +6,7 @@ const testimonials = [
     name: "Deborah Moraes",
     position: "Coordenadora de Inovação e Projetos - Nextios",
     score: 5,
-    img: `${import.meta.env.BASE_URL}/img/deborah.jpg`,
+    img: `img/deborah.jpg`,
     message:
       "O Marcus é um desenvolvedor que se destaca pela capacidade de identificar problemas e propor melhorias de forma clara, objetiva e alinhada às necessidades do time. Sua contribuição tem sido fundamental para a evolução da área de desenvolvimento, e sua trajetória demonstra uma evolução profissional notável. Executa suas tarefas com eficácia, qualidade e comprometimento com prazos, sempre demonstrando um entendimento profundo dos processos envolvidos. Participa ativamente da construção e evolução do sistema de precificação da Nextios, hoje utilizado por toda a empresa. Mesmo diante de desafios ou temas que ainda não domina, Marcus assume a responsabilidade, estuda, aprende e entrega. É um profissional confiável, resiliente e com uma postura exemplar dentro da equipe.",
   },
@@ -14,7 +14,7 @@ const testimonials = [
     name: "Cesar Costa",
     position: "Desenvolvedor - Nextios",
     score: 5,
-    img: `${import.meta.env.BASE_URL}/img/cesar.jpg`,
+    img: `img/cesar.jpg`,
     message:
       "Conheci o Marcus como um dev super técnico, daqueles que realmente dominam o que fazem. Ao longo desses últimos anos, tivemos a oportunidade de crescer juntos, trocar muitas ideias e aprender um com o outro — e sou muito grato por isso. O Marcus é um grande parceiro, tanto no código quanto fora dele! Sempre me apoiou em tudo que propus, com uma disposição admirável. Ele entrou no time bem na dele, tímido (como todo bom programador, rs), mas foi se soltando e hoje manda muito bem nas soft skills também. Chegou ao ponto de tocar demandas sozinho, do início ao fim, com muita responsabilidade. Tenho um enorme orgulho de ter feito parte do seu crescimento e também uma gratidão imensa por tudo que ele contribuiu. Marcus, você é brabo!",
   },
@@ -22,7 +22,7 @@ const testimonials = [
     name: "João Reis",
     position: "Desenvolvedor - Nextios",
     score: 5,
-    img: `${import.meta.env.BASE_URL}/img/joao.jpg`,
+    img: `img/joao.jpg`,
     message:
       'Marcus é um cara muito tranquilo de se trabalhar. É aquele tipo de pessoa que te faz sentir alívio de tê-la no seu time porque é muito fácil de lidar; é objetivo, dedicado, se comunica bem, é interessado, se coloca na linha de frente pra resolver o problema e sempre dá um jeito, tem o "se-vira-ômetro" alto e um ótimo senso de completude, além da incrível capacidade técnica. Gostaria sempre de trabalhar junto com ele.',
   },
